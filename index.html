@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600&family=Inconsolata&family=Pacifico&family=Righteous&family=Roboto&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+
+    <title>myTraining</title>
+</head>
+<body>
+<div class="mmz-main-container mmz-flex">
+    <header class="mmz-flex" id="mmz-header"></header>
+    <div id="mmz-content-container"></div>
+    <footer class="mmz-footer">
+        <div class="mmz-flex mmz-footer-title mmz-font-vt323">
+            <img src="./assets/memoza_primary.svg" alt="mimosa flower">My Training
+        </div>
+    </footer>
+</div>
+
+
+<script src="./js/router.js" defer></script>
+<script src="./js/headers.js" defer></script>
+<script src="./js/guidelines.js" defer></script>
+
+</body>
+</html>
+<style>
+    #mmz-content-container {}
+
+    .mmz-main-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #mmz-header {}
+
+    .mmz-footer {
+        background-color: #111330;
+        padding: 10px;
+    }
+
+    .mmz-footer-title {
+        align-items: flex-end;
+        justify-content: flex-end;
+        color: white
+    }
+
+    .mmz-footer-title img {
+        height: 20px;
+        margin-right: 0.5em;
+    }
+
+</style>

@@ -1,0 +1,133 @@
+body {
+    --primary-color: #EDA100;
+    --secondary-color: #6A4F3F;
+    --emphasis-color: #D43900;
+    --medium-color: #204D17;
+    --dark-color: #111330;
+    --back-color: #F8FCFF;
+    --light-color: #F8FCFF;
+    margin: 0;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+.mmz-flex {
+    display: flex;
+}
+
+/*CARD*/
+.mmz-card {
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.mmz-card h1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: normal;
+}
+.mmz-card h2 {
+    font-weight: normal;
+}
+
+/*.mmz-card-simple-primary {*/
+/*    border: 2px solid var(--primary-color);*/
+/*}*/
+
+/*.mmz-card-primary {*/
+/*    background-color: var(--primary-color);*/
+/*}*/
+
+/*.mmz-primary-color {*/
+/*    color: var(--primary-color);*/
+/*}*/
+
+/*.mmz-card-simple-secondary {*/
+/*    border: 2px solid var(--secondary-color);*/
+/*}*/
+
+/*.mmz-card-secondary {*/
+/*    background-color: var(--secondary-color);*/
+/*    color: var(--light-color);*/
+/*}*/
+
+/*.mmz-secondary-color {*/
+/*    color: var(--secondary-color);*/
+/*}*/
+
+/*.mmz-card-simple-emphasis {*/
+/*    border: 2px solid var(--emphasis-color);*/
+/*}*/
+
+/*.mmz-card-emphasis {*/
+/*    background-color: var(--emphasis-color);*/
+/*    color: var(--light-color);*/
+/*}*/
+
+/*.mmz-emphasis-color {*/
+/*    color: var(--emphasis-color);*/
+/*}*/
+
+/*.mmz-card-simple-medium {*/
+/*    border: 2px solid var(--medium-color);*/
+/*}*/
+
+/*.mmz-card-medium {*/
+/*    background-color: var(--medium-color);*/
+/*    color: var(--light-color);*/
+/*}*/
+
+.mmz-font-bold {
+    font-weight: 800;
+}
+
+.mmz-text-justify {
+    text-align: justify;
+    text-justify: auto;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+}
+li {
+    cursor: pointer;
+}
+
+.mmz-formatrice-header ul li:hover {
+    color: var(--emphasis-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+a:hover {
+    color: var(--emphasis-color);
+}
+/*COLOR*/
+.mmz-color-medium { color: var(--medium-color); }
+.mmz-color-primary { color: var(--primary-color); }
+.mmz-color-emphasis { color: var(--emphasis-color); }
+.mmz-color-light { color: var(--light-color); }
+
+/*FONT*/
+.mmz-font-anton { font-family: 'Anton', sans-serif; }
+.mmz-font-dancing { font-family: 'Dancing Script', cursive; }
+.mmz-font-pacifico { font-family: 'Pacifico', cursive; }
+.mmz-font-righteous { font-family: 'Righteous', cursive; }
+.mmz-font-inconsolata { font-family: 'Inconsolata', cursive; }
+.mmz-font-vt323 { font-family: 'VT323', monospace; }
+
