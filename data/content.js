@@ -85,19 +85,3 @@ const myTrainings = {
 
     ]
 }
-
-function getNextTraining(trainings){
-    const trainingType = trainings.trainingType;
-    let possibilities = [...myTrainings[trainingType]];
-    trainings.data.forEach(activity => {
-        possibilities = possibilities.filter(possibility => possibility.id !== activity.trainingId)
-        if(possibilities.length === 1){
-            return possibilities[0]
-        }
-    })
-    return possibilities[getRandomInt(possibilities.length)];
-}
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}

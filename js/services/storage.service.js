@@ -1,6 +1,18 @@
-function getLocalHistory() {
-    const history = localStorage.getItem("history") || JSON.stringify(emptyHistory);
+function getHistoryStorage() {
+    let history = localStorage.getItem('history');
+    if(!history){
+        history = JSON.stringify(emptyHistory);
+        localStorage.setItem('history', history);
+    }
     return JSON.parse(history)
+}
+
+function setGuidelineStorage(guideline){
+    localStorage.setItem('guideline', JSON.stringify(guideline))
+}
+
+function getGuidelineStorage(){
+    return JSON.parse(localStorage.getItem('guideline'))
 }
 
 const emptyHistory = {

@@ -12,5 +12,6 @@ const config = {
         [TrainingType.RATE]: 0.15,
 
     },
-    bpm: 195
+    bpm: 195,
+    numberOfGuidelines: 2
 }
