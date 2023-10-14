@@ -6,11 +6,16 @@ function calculRatio(history, totalCount, goal) {
 function getNextTraining(training, activities){
     console.log(history)
     const trainingType = training.trainingType;
-    let possibilities = [...myTrainings[trainingType]];
+    const allPossibilities = [...myTrainings[trainingType]];
+    let possibilities = [...allPossibilities];
     activities.forEach(activity => {
         possibilities = possibilities.filter(possibility => possibility.id !== activity.id)
+
         if(possibilities.length === 1){
             return possibilities[0]
+        }
+        if(possibilities.length === 0) {
+            possibilities = [...allPossibilities];
         }
     })
     return possibilities[getRandomInt(possibilities.length)];
@@ -25,6 +30,8 @@ function getBestTraining(localHistory) {
     const totalCount = localHistory.totalCount;
     const goal = config.goal;
 
+    console.log('totalCount', localHistory)
+
     if(totalCount === 0){
         const defaultTrainingType = TrainingType.FOOTING;
         return {
@@ -38,7 +45,9 @@ function getBestTraining(localHistory) {
     trainingTypes.forEach(trainingType => {
         const history = localHistory[trainingType];
         const ratio = calculRatio(history, totalCount, goal[trainingType]);
+        console.log(trainingType, ratio)
         if(!bestType || ratio > bestType.ratio) {
+            console.log('ici')
             bestType = {
                 trainingType,
                 data: history.data,
@@ -54,20 +63,19 @@ function getBestGuidelines(numberOfChoice) {
     const bestTrainingType = getBestTraining(history)
     const bestTrainings = []
     for (let i = 0; i < numberOfChoice; i++) {
-        bestTrainings.push({
-            trainingType: bestTrainingType.trainingType,
-            ...getNextTraining(bestTrainingType, [...bestTrainingType.data, ...bestTrainings])
-        })
+        const nextTraining = getNextTraining(bestTrainingType, [...bestTrainingType.data, ...bestTrainings]);
+        if(nextTraining) bestTrainings.push(nextTraining);
     }
     return bestTrainings;
 }
 
 function getGuidelines(){
     let guidelines = getGuidelineStorage();
-    const numberOfChoice = config.numberOfGuidelines;
-    if(!guidelines || guidelines.length < numberOfChoice){
+    if(!guidelines || !guidelines.length){
+        const numberOfChoice = config.numberOfGuidelines;
         guidelines = getBestGuidelines(numberOfChoice)
         setGuidelineStorage(guidelines);
     }
     return guidelines;
 }
+

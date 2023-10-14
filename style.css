@@ -7,16 +7,10 @@ body {
     --back-color: #F8FCFF;
     --light-color: #F8FCFF;
     margin: 0;
-}
 
-body {
     background-color: var(--back-color);
     color: var(--dark-color);
     font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    font-size: 1.2rem;
 }
 
 .mmz-flex {
@@ -28,14 +22,19 @@ h1 {
     margin: 0.5em;
     padding: 1em;
     border-radius: 0.5em;
+    min-height: 175px;
+    cursor: pointer;
 }
 
 .mt-card h1 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 1.2rem;
     font-weight: normal;
 }
+
 .mt-card h2 {
+    text-align: center;
+    font-size: 1.2rem;
     font-weight: normal;
 }
 
@@ -51,12 +50,43 @@ h1 {
 /*    color: var(--primary-color);*/
 /*}*/
 
-.mt-card-simple-secondary {
+.mt-card-simple__fractionated {
     border: 2px solid var(--secondary-color);
 }
 
-.mt-card-secondary {
+.mt-card__fractionated {
+    border: 2px solid var(--secondary-color);
     background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.mt-card-simple__footing {
+    border: 2px solid var(--medium-color);
+}
+
+.mt-card__footing {
+    border: 2px solid var(--medium-color);
+    background-color: var(--medium-color);
+    color: var(--light-color);
+}
+
+.mt-card-simple__intensive {
+    border: 2px solid var(--emphasis-color);
+}
+
+.mt-card__intensive {
+    border: 2px solid var(--emphasis-color);
+    background-color: var(--emphasis-color);
+    color: var(--light-color);
+}
+
+.mt-card-simple__rate {
+    border: 2px solid var(--primary-color);
+}
+
+.mt-card__rate {
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--light-color);
 }
 
@@ -86,13 +116,41 @@ h1 {
 /*    color: var(--light-color);*/
 /*}*/
 
-.mmz-font-bold {
+.mt-font-bold {
     font-weight: 800;
 }
 
-.mmz-text-justify {
+.mt-text-justify {
     text-align: justify;
     text-justify: auto;
+}
+
+.mt-add-training__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px;
+}
+
+.mt-add-training__item {
+    display: flex;
+    flex-direction: column;
+}
+.mt-add-training__item input{
+    width: 75px;
+    font-size: medium;
+}
+
+.mt-add-training__action {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.mt-add-training__button {
+    font-size: medium;
+    padding: 5px;
 }
 
 ul {
@@ -104,10 +162,6 @@ ul {
 }
 li {
     cursor: pointer;
-}
-
-.mmz-formatrice-header ul li:hover {
-    color: var(--emphasis-color);
 }
 
 a {

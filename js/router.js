@@ -10,14 +10,14 @@ const routes = {
         template: "./templates/pages/guidelines.html",
         title: `Guidelines | ${siteTitle}`,
         description: "this is my guidelines page",
-        script: () => guidelinesOnClick(),
+        script: () => guidelinesPage(),
     },
     "guidelines": {
         template: "./templates/pages/guidelines.html",
         title: `Guidelines | ${siteTitle}`,
         description: "this is my guidelines page",
-        script: () => guidelinesOnClick(),
-    }
+        script: () => guidelinesPage(),
+    },
 }
 
 const locationHandler = async () => {

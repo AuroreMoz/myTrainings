@@ -7,6 +7,10 @@ function getHistoryStorage() {
     return JSON.parse(history)
 }
 
+function setHistoryStorage(history) {
+    localStorage.setItem('history', JSON.stringify(history))
+}
+
 function setGuidelineStorage(guideline){
     localStorage.setItem('guideline', JSON.stringify(guideline))
 }
